@@ -1,0 +1,111 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    overflow:hidden;
+    color: rgb(211,211,211);
+    background-image: url(img/6548938.jpg);
+    background-size: cover;
+    
+
+    
+}
+p{
+    font-size: 23px;
+    position: absolute;
+    align-content: center;
+    top:120px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+h1{
+    position:absolute;
+    top: 50px;
+    align-content: center;
+    text-decoration: underline;
+
+
+}
+.container{
+    height:500px;
+    width: 400px;
+    display:flex;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+
+}
+.card1,.card2,.card3{
+    height: 100%;
+    width:100%;
+    margin:50px;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;  
+}
+.card1.is-flipped {
+    transform: rotateY(180deg);
+}
+.card2.is-flipped {
+    transform: rotateY(180deg);
+}
+.card3.is-flipped {
+    transform: rotateY(180deg);
+}
+.front,.back{
+    height: 100%;
+    width:100%;
+    border-radius: 2rem;
+    box-shadow: 0 3px 18px 3px rgba(0, 0, 0, 0.2);
+    position:absolute;
+    background: #fff;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+}
+.front{
+    background-image: url(img/card_back.jpg);
+    background-size: cover;
+    background-repeat: no_repeat;
+}
+.back{
+    background-color: rgb(74, 73, 73);
+    transform: rotateY(180deg);
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    gap: 5rem;
+    background-image: url(img/spider.jpg);
+    background-size: cover;
+    color:rgb(0, 0, 0);
+}
+#image{
+    opacity: 0.89;
+}
+#okie {
+    position: fixed;
+    bottom:40px;
+    right:40px;
+    padding:10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+    font-weight: bold;
+    font-size: 16px;
+}

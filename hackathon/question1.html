@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Questions</title>
+    <style>
+        .game-container img {
+            height: 350px;
+            width: 350px;
+            padding: 15px;
+        }
+        .gif-image{
+            border-radius: 48px;
+
+        }
+        .game-container{
+            position: relative;
+            top:0;
+            left: 0;
+            z-index: 2;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            /* margin-top: 57px; */
+            /* margin-left: 45px; */
+        }
+        .game-container h1{
+            padding: 12px;
+            font-size: 2.2rem;
+            color: azure;
+        }
+      
+        .game-container p{
+            padding: 12px;
+            font-size: 1.2rem;
+            color: white;
+            text-align: center;
+        }
+        .button-container{
+            padding: 12px;
+        }
+        .button-container .btn1{
+            margin: 10px;
+            background: rgb(0, 172, 238);
+            background: linear-gradient(0deg, rgba(97, 183, 217, 0.815) 0%, rgba(62, 141, 219, 0.847) 100%);
+            width: 130px;
+            height: 40px;
+            line-height: 42px;
+            padding: 0;
+            border: none;
+            border-radius: 21px;
+        }
+        .button-container .btn2{
+            margin: 10px;
+            background: rgb(0, 172, 238);
+            background: linear-gradient(0deg, rgba(97, 183, 217, 0.815) 0%, rgba(62, 141, 219, 0.847) 100%);
+            width: 130px;
+            height: 40px;
+            line-height: 42px;
+            padding: 0;
+            border: none;
+            border-radius: 21px;
+
+        }
+        .button-container .btn2:hover,
+        .button-container .btn2:active{
+            background: linear-gradient(0deg, rgba(134, 192, 215, 0.815) 0%, rgba(133, 174, 214, 0.847) 100%);
+            transition: 3s;
+        }
+        .button-container .btn1:hover,
+        .button-container .btn1:active{
+            background: linear-gradient(0deg, rgba(134, 192, 215, 0.815) 0%, rgba(133, 174, 214, 0.847) 100%);
+            transition: 3s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            /* height: 100vh; */
+            background: #0c192c;
+            background-size: cover;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 98%;
+            overflow: hidden;
+        }
+        .main{
+           /* position: relative; */
+           /* position: relative;
+            top:50px;
+            left: 50px;
+            z-index: 1; */
+           display: flex; 
+        }
+        .main span{
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background: #4fc3dc;
+            margin: 0 4px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 10px #4fc3dc44,
+            0 0 50px #4fc3dc ,
+            0 0 100px #4fc3dc;
+            animation: animate 15s linear infinite;
+            animation-duration: calc(125s / var(--i));
+        }
+        .main span:nth-child(even){
+            background: #ff2d75;
+            border-radius: 50%;
+            box-shadow: 0 0 0 10px #4fc3dc44,
+            0 0 50px #ff2d75 ,
+            0 0 100px #ff2d75;
+        }
+        @keyframes animate{
+            0%
+            {
+                transform: translateY(100vh) scale(0);
+            }
+            100%
+            {
+                transform: translateY(-10vh) scale(1);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="main">
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:22"></span>
+            <span style="--i:25"></span>
+            <span style="--i:18"></span>
+            <span style="--i:21"></span>
+            <span style="--i:15"></span>
+            <span style="--i:13"></span>
+            <span style="--i:26"></span>
+            <span style="--i:17"></span>
+            <span style="--i:13"></span>
+            <span style="--i:28"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:22"></span>
+            <span style="--i:25"></span>
+            <span style="--i:18"></span>
+            <span style="--i:21"></span>
+            <span style="--i:15"></span>
+            <span style="--i:13"></span>
+            <span style="--i:26"></span>
+            <span style="--i:17"></span>
+            <span style="--i:13"></span>
+            <span style="--i:28"></span>
+           
+            
+        </div>
+        <div class="game-container">
+            <h1>What will you do?</h1>
+            <img src="Designer.gif" alt="GIF image" class="gif-image">
+            <p id="message">You saw a kid carrying heavy things or doing labour work?</br></p>
+            <div class="button-container">
+                <button onclick="wrong()" class="btn1">Ignore it</button>
+                <button onclick="right()" class="btn2">Call the police</button>
+            </div>
+            <p id="demo"></p>
+    </div>
+    
+    </div>
+     <script> 
+        function right(){
+            document.getElementById("demo").innerHTML="Right answer";
+        }
+        function wrong(){
+            document.getElementById("demo").innerHTML="Wrong answer";
+        }
+    </script> 
+</body>
+
+</html>
